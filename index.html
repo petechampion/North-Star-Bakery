@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Fresh Harvest Bakery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="bakery-logo_c.png" alt="Fresh Harvest Bakery Logo"
+    <h1>Welcome to Fresh Harvest Bakery</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="btn">Home</a></li>
+            <li><a href="products.html" class="btn">Products</a></li>
+            <li><a href="about.html" class="btn">About Us</a></li>
+            <li><a href="contact.html" class="btn">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section> 
+            <h2>Freshly Baked Daily in the Heart of Town</h2>
+            <p>At Fresh Harvest Bakery, we craft sourdough breads, delicate pastries, and rich roasted coffee using 100% locally sourced organic ingredients. Stop by for breakfast or order ahead for your special events. </p>
+        </section>
+
+        <section>
+        <h2>Featured Seasonal Crafting</h2>
+        <!--Required Responsive Image using <picture> -->
+        <picture>
+            <source media="(min-width: 1024px)" srcset="bakery-feature-large_c.png">
+            <source media="(min-width: 600px)" srcset="bakery_bread_c.png">
+            <img src="bakery-feature-small_c.png" alt="A freshly baked batch of sourdough bread sitting on a wooden counter">
+                </picture>
+        </section>
+
+        <section>
+            <h2>Hours & Location</h2>
+            <p><strong>Store Hours:</strong> Tuesday - Sunday: 7:00 AM - 4:00 PM (Closed Mondays)</p>
+            <p><strong>Address:</strong> 123 Main Street, Suite A, Downtown</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Fresh Havest Bakery. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

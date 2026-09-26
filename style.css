@@ -1,0 +1,438 @@
+
+CSS
+/* ==========================================================================
+   TOUCHSTONE 3: VISUAL DESIGN SYSTEM
+   Color Palette: 3 Colors (Primary: #1D3557, Secondary: #457B9D, Accent: #E63946)
+   Typography: Max 2 Font Families ('Segoe UI' / system sans-serif)
+   Approach: Mobile-First Layout using Flexbox
+   ========================================================================== */
+
+/* 1. Global Reset & Variables */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #1D3557;   /* Deep Navy for headings & brand identity */
+  --secondary-color: #457B9D; /* Muted Slate Blue for borders/accents */
+  --accent-color: #E63946;    /* Coral Red for buttons/CTAs */
+  --bg-light: #F8F9FA;        /* Light Grey background for scannability */
+  --text-dark: #212529;       /* Dark charcoal for high contrast body text */
+  --white: #FFFFFF;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 3rem;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 2. Responsive Typography & Hierarchy */
+h1, h2, h3 {
+  color: var(--primary-color);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-sm);
+}
+
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.4rem; margin-top: var(--spacing-md); }
+h3 { font-size: 1.15rem; }
+
+p, li {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* 3. Header & Navigation (Flexbox Mobile View) */
+header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+header h1 {
+  color: var(--white);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Stacked links on mobile */
+  gap: 0.5rem;
+  margin-top: var(--spacing-sm);
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: var(--spacing-sm);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  display: block;
+}
+
+nav a:hover, 
+nav a:focus {
+  background-color: var(--accent-color);
+}
+
+/* 4. Main Layout & Cards (Flexbox) */
+main {
+  flex: 1;
+  padding: var(--spacing-md);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column; /* Mobile first vertical stack */
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--secondary-color);
+  border-top: 4px solid var(--primary-color);
+  border-radius: 6px;
+  padding: var(--spacing-md);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* 5. Form & Call to Action Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  background-color: var(--white);
+  padding: var(--spacing-md);
+  border-radius: 6px;
+  border: 1px solid var(--secondary-color);
+}
+
+label {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+button, .btn {
+  background-color: var(--accent-color);
+  color: var(--white);
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: #c92a37;
+}
+
+/* 6. Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+/* ==========================================================================
+   7. MEDIA QUERY: Larger Screens (Tablets & Desktops >= 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  nav ul {
+    flex-direction: row; /* Horizontal navbar on tablet/desktop */
+    gap: 1rem;
+  }
+
+  nav a {
+    background-color: transparent;
+  }
+
+  .card-container {
+    flex-direction: row; /* Horizontal flex layout for content cards */
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - var(--spacing-md)); /* 2-column layout */
+  }
+}
+
+CSS
+/* ==========================================================================
+   TOUCHSTONE 3: VISUAL DESIGN SYSTEM
+   Color Palette: 3 Colors (Primary: #1D3557, Secondary: #457B9D, Accent: #E63946)
+   Typography: Max 2 Font Families ('Segoe UI' / system sans-serif)
+   Approach: Mobile-First Layout using Flexbox
+   ========================================================================== */
+
+/* 1. Global Reset & Variables */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #1D3557;   /* Deep Navy for headings & brand identity */
+  --secondary-color: #457B9D; /* Muted Slate Blue for borders/accents */
+  --accent-color: #E63946;    /* Coral Red for buttons/CTAs */
+  --bg-light: #F8F9FA;        /* Light Grey background for scannability */
+  --text-dark: #212529;       /* Dark charcoal for high contrast body text */
+  --white: #FFFFFF;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 3rem;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 2. Responsive Typography & Hierarchy */
+h1, h2, h3 {
+  color: var(--primary-color);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-sm);
+}
+
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.4rem; margin-top: var(--spacing-md); }
+h3 { font-size: 1.15rem; }
+
+p, li {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* 3. Header & Navigation (Flexbox Mobile View) */
+header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+header h1 {
+  color: var(--white);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Stacked links on mobile */
+  gap: 0.5rem;
+  margin-top: var(--spacing-sm);
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: var(--spacing-sm);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  display: block;
+}
+
+nav a:hover, 
+nav a:focus {
+  background-color: var(--accent-color);
+}
+
+/* 4. Main Layout & Cards (Flexbox) */
+main {
+  flex: 1;
+  padding: var(--spacing-md);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column; /* Mobile first vertical stack */
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--secondary-color);
+  border-top: 4px solid var(--primary-color);
+  border-radius: 6px;
+  padding: var(--spacing-md);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* 5. Form & Call to Action Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  background-color: var(--white);
+  padding: var(--spacing-md);
+  border-radius: 6px;
+  border: 1px solid var(--secondary-color);
+}
+
+label {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+button, .btn {
+  background-color: var(--accent-color);
+  color: var(--white);
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: #c92a37;
+}
+
+/* 6. Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+/* ==========================================================================
+   7. MEDIA QUERY: Larger Screens (Tablets & Desktops >= 768px)
+   ========================================================================== */
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  nav ul {
+    flex-direction: row; /* Horizontal navbar on tablet/desktop */
+    gap: 1rem;
+  }
+
+  nav a {
+    background-color: transparent;
+  }
+
+  .card-container {
+    flex-direction: row; /* Horizontal flex layout for content cards */
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - var(--spacing-md)); /* 2-column layout */
+  }
+}
+/* --- TOUCHSTONE 4 STYLES --- */
+
+/* Validation Errors & Success Messages */
+.error-msg {
+  color: #c0392b;
+  font-size: 0.85rem;
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.success-msg {
+  color: #27ae60;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Favorites Section Styling */
+.favorites-section {
+  background: #f7e8d8;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+
+.favorites-box {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.fav-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+

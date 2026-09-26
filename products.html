@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Fresh Harvest Bakery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1> Our Fresh Baked Goods</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>        
+    </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Artisan Breads & Pastries</h2>
+            <p>We take pride in our slow-fermentation process, giving our breads a rich flavor and perfect crust.</p>
+            
+            <!-- Required Figure with Caption -->
+            <figure>
+                <img src="bakery-signature-loaf_c.png" alt="An assortment of golden-brown croissants and Danish pastries on a tray">
+                <figcaption>Figure 1: Our morning pastry selection, baked fresh every day at 5:00 AM.</figcaption>
+            </figure>
+        </section> 
+
+        <section class="favorites-section">
+  <h3>Your Saved Favorites (<span id="fav-count">0</span>)</h3>
+  <div id="favorites-list" class="favorites-box"></div>
+  <button id="clear-favs-btn" class="btn-secondary">Clear Favorites</button>
+</section>
+
+        <section>
+  <h2>Menu Categories</h2>
+
+  <!-- TOUCHSTONE 4: FAVORITES CONTAINER -->
+  <section class="favorites-section">
+    <h3>Your Saved Favorites (<span id="fav-count">0</span>)</h3>
+    <div id="favorites-list" class="favorites-box"></div>
+    <button id="clear-favs-btn" class="btn-secondary">Clear Favorites</button>
+  </section>
+
+  <h3>Artisan Breads</h3>
+  <ul>
+    <li>
+      <strong>Classic Country Sourdough:</strong> Naturally leavened with a crisp crust.
+      <button class="fav-btn" data-id="1">Add to Favorites</button>
+    </li>
+    <li>
+      <strong>Whole Wheat Multigrain:</strong> Packed with organic seeds and honey.
+      <button class="fav-btn" data-id="2">Add to Favorites</button>
+    </li>
+    <li>
+      <strong>Rosemary Focaccia:</strong> Topped with extra virgin olive oil and sea salt.
+      <button class="fav-btn" data-id="3">Add to Favorites</button>
+    </li>
+  </ul>
+
+  <h3>Pastries & Sweets</h3>
+  <ul>
+    <li>
+      <strong>Butter Croissant:</strong> Flaky, layered French-style croissant.
+      <button class="fav-btn" data-id="4">Add to Favorites</button>
+    </li>
+    <li>
+      <strong>Cinnamon Roll:</strong> Topped with cream cheese icing.
+      <button class="fav-btn" data-id="5">Add to Favorites</button>
+    </li>
+    <li>
+      <strong>Seasonal Fruit Tart:</strong> Vanilla pastry cream with local fresh berries.
+      <button class="fav-btn" data-id="6">Add to Favorites</button>
+    </li>
+  </ul>
+</section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Fresh Harvest Bakery. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
